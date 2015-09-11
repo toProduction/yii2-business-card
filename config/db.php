@@ -1,10 +1,10 @@
 <?php
 
 return [
-    'class' => 'yii\db\Connection',
-    'dsn' => 'mysql:host=localhost;dbname=business_cart_dev',
-    'username' => 'root',
-    'password' => 'root',
-    'charset' => 'utf8',
-    'tablePrefix' => 'yashr_',
+    'class'       => 'yii\db\Connection',
+    'dsn'         => getenv('DB_DNS'),
+    'username'    => getenv('DB_USERNAME'),
+    'password'    => getenv('DB_PASSWORD'),
+    'charset'     => 'utf8',
+    'tablePrefix' => getenv('DB_TABLE_PREFIX'),
 ];
